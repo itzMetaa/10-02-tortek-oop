@@ -24,8 +24,14 @@ public class Tort {
     public void isEgeszE(){
     
     }
-    public void lnko(){
-    
+    public int lnko(int a, int b){
+        int temp;
+        while(b>0){
+            temp = b;
+            b = a%b;
+            a = temp;
+        }
+        return a;
     }
     public void lkkt(){
     
@@ -42,12 +48,12 @@ public class Tort {
     public void osztas(){
     
     }
+    
     public void kiir(){
         System.out.println(this.szamlalo + "\n" +
                 "-\n" +
                 this.nevezo+ "\n");
     }
-    
     
     
 }
