@@ -17,7 +17,18 @@ public class Tort {
         return this.szamlalo;
     }
     
-    
+    public void legegyszerubbAlak(){
+        System.out.printf("Legegyszerűbb alak: ");
+        kiir(legegyszerubbSzamlalo(), legegyszerubbNevezo());
+    }
+    public int legegyszerubbSzamlalo(){
+        int s = this.szamlalo / lnko(this.szamlalo,this.nevezo);
+        return s;
+    } 
+    public int legegyszerubbNevezo(){
+        int s = this.nevezo / lnko(this.szamlalo,this.nevezo);
+        return s; 
+    }
     public void isEgszerusithetoE(){
         
     }
@@ -34,7 +45,7 @@ public class Tort {
         return a;
     }
     public void lkkt(){
-    
+        
     }
     public void osszeadas(){
     
@@ -49,11 +60,13 @@ public class Tort {
     
     }
     
-    public void kiir(){
-        System.out.println(this.szamlalo + "\n" +
-                "-\n" +
-                this.nevezo+ "\n");
+    public void kiir(int a, int b){
+        System.out.printf("%s/%s\n\n", a, b);
     }
     
+    @Override
+    public String toString(){
+        return String.format("%s/%s\n", this.szamlalo, this.nevezo);
+    }
     
 }
